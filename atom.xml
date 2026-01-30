@@ -2,7 +2,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Nizikun的博客</title>
   
-  <subtitle>回首向来萧瑟处,归去       也无风雨也无晴</subtitle>
+  <subtitle>&#39;回首向来萧瑟处,归去
+ 也无风雨也无晴&#39;
+</subtitle>
   <link href="https://nizikun.github.io/atom.xml" rel="self"/>
   
   <link href="https://nizikun.github.io/"/>
