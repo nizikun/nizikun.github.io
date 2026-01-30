@@ -6,7 +6,7 @@
   <link href="https://nizikun.github.io/atom.xml" rel="self"/>
   
   <link href="https://nizikun.github.io/"/>
-  <updated>2026-01-29T09:54:17.632Z</updated>
+  <updated>2026-01-30T03:46:55.000Z</updated>
   <id>https://nizikun.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>sar雷达_RD算法</title>
+    <link href="https://nizikun.github.io/2026/01/30/sar-lei-da-rd-suan-fa/"/>
+    <id>https://nizikun.github.io/2026/01/30/sar-lei-da-rd-suan-fa/</id>
+    <published>2026-01-30T03:39:58.000Z</published>
+    <updated>2026-01-30T03:46:55.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;SAR雷达RD（距离-多普勒）算法原理与工程实现解析&quot;&gt;&lt;a href=&quot;#SAR雷达RD（距离-多普勒）算法原理与工程实现解析&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
