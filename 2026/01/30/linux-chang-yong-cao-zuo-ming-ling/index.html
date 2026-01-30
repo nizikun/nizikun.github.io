@@ -1,0 +1,1414 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Linux常用操作命令, nizikun 博客, nizikun blog, nizikun, hexo, matery, js, programming">
+    <meta name="description" content="6666 66666  6666">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Linux常用操作命令 | Nizikun的博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 7.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Nizikun的博客" type="application/atom+xml">
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Nizikun的博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Nizikun的博客</div>
+        <div class="logo-desc">
+            
+            6666 66666  6666
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/7')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Linux常用操作命令</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Linux/">
+                                <span class="chip bg-color">Linux</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2026-01-30
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    4.4k
+                </div>
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Linux-常用命令手册"><a href="#Linux-常用命令手册" class="headerlink" title="Linux 常用命令手册"></a>Linux 常用命令手册</h1><p>本文档整理 Linux 日常运维、开发必备常用命令，按功能分类，包含 <strong>语法、示例、核心说明</strong>，兼顾新手入门与日常查阅，所有命令均经过实际测试（基于 CentOS/Ubuntu 通用版本）。</p>
+<h2 id="一、基础操作命令（必记）"><a href="#一、基础操作命令（必记）" class="headerlink" title="一、基础操作命令（必记）"></a>一、基础操作命令（必记）</h2><p>此类命令用于 Linux 系统基础交互，高频使用，记熟可大幅提升操作效率。</p>
+<h3 id="1-查看当前目录：pwd"><a href="#1-查看当前目录：pwd" class="headerlink" title="1. 查看当前目录：pwd"></a>1. 查看当前目录：pwd</h3><ul>
+<li><p><strong>语法</strong>：pwd</p>
+</li>
+<li><p><strong>功能</strong>：Print Working Directory，显示当前所在的绝对路径。</p>
+</li>
+<li><p><strong>示例</strong>：<br>  `[root@localhost ~]# pwd</p>
+</li>
+</ul>
+<p>/root`</p>
+<h3 id="2-切换目录：cd"><a href="#2-切换目录：cd" class="headerlink" title="2. 切换目录：cd"></a>2. 切换目录：cd</h3><ul>
+<li><p><strong>语法</strong>：cd [目录路径]</p>
+</li>
+<li><p><strong>功能</strong>：Change Directory，切换到指定目录。</p>
+</li>
+<li><p><strong>常用参数/示例</strong>：<br>  `cd /home          # 切换到 /home 绝对路径目录</p>
+</li>
+</ul>
+<p>cd test           # 切换到当前目录下的 test 子目录（相对路径）<br>cd ..             # 切换到上一级目录<br>cd ~              # 切换到当前用户的家目录（root 是 /root，普通用户是 /home/用户名）<br>cd -              # 切换到上一次所在的目录`</p>
+<h3 id="3-查看目录内容：ls"><a href="#3-查看目录内容：ls" class="headerlink" title="3. 查看目录内容：ls"></a>3. 查看目录内容：ls</h3><ul>
+<li><p><strong>语法</strong>：ls [选项] [目录路径]</p>
+</li>
+<li><p><strong>功能</strong>：List，显示目录下的文件和子目录。</p>
+</li>
+<li><p><strong>常用选项</strong>：</p>
+<ul>
+<li><p>-l：以长格式显示（包含权限、大小、修改时间等详细信息），简称「ll」（Linux 可自定义别名）</p>
+</li>
+<li><p>-a：显示所有文件/目录，包括隐藏文件（以 . 开头的文件）</p>
+</li>
+<li><p>-h：以人性化格式显示文件大小（如 K、M、G，替代默认字节）</p>
+</li>
+</ul>
+</li>
+<li><p><strong>示例</strong>：<br>  `ls -l /home       # 长格式显示 /home 目录内容</p>
+</li>
+</ul>
+<p>ll -ah            # 人性化显示当前目录所有文件（包括隐藏文件）<br>ls -l | grep txt  # 筛选显示当前目录下所有 .txt 结尾的文件`</p>
+<h3 id="4-清屏：clear"><a href="#4-清屏：clear" class="headerlink" title="4. 清屏：clear"></a>4. 清屏：clear</h3><ul>
+<li><p><strong>语法</strong>：clear 或 Ctrl + L（快捷键，更便捷）</p>
+</li>
+<li><p><strong>功能</strong>：清除终端屏幕上的所有内容，光标回到顶部。</p>
+</li>
+</ul>
+<h3 id="5-退出终端：exit"><a href="#5-退出终端：exit" class="headerlink" title="5. 退出终端：exit"></a>5. 退出终端：exit</h3><ul>
+<li><p><strong>语法</strong>：exit</p>
+</li>
+<li><p><strong>功能</strong>：退出当前终端会话（远程连接时断开连接，本地终端时关闭窗口）。</p>
+</li>
+</ul>
+<h3 id="6-查看命令帮助：man-–help"><a href="#6-查看命令帮助：man-–help" class="headerlink" title="6. 查看命令帮助：man/–help"></a>6. 查看命令帮助：man/–help</h3><ul>
+<li><p><strong>语法</strong>：man [命令] 或 命令 –help</p>
+</li>
+<li><p><strong>功能</strong>：查看命令的详细用法（man 是手册，更全面；–help 是简易帮助）。</p>
+</li>
+<li><p><strong>示例</strong>：<br>  `man ls            # 查看 ls 命令的完整手册（按 q 退出手册）</p>
+</li>
+</ul>
+<p>cd –help         # 查看 cd 命令的简易帮助`</p>
+<h2 id="二、文件管理命令（高频）"><a href="#二、文件管理命令（高频）" class="headerlink" title="二、文件管理命令（高频）"></a>二、文件管理命令（高频）</h2><p>用于文件/目录的创建、删除、复制、移动、查看等操作，是日常使用最多的命令组。</p>
+<h3 id="1-创建文件：touch"><a href="#1-创建文件：touch" class="headerlink" title="1. 创建文件：touch"></a>1. 创建文件：touch</h3><ul>
+<li><p><strong>语法</strong>：touch [文件名]</p>
+</li>
+<li><p><strong>功能</strong>：创建一个空文件；若文件已存在，更新文件的修改时间。</p>
+</li>
+<li><p><strong>示例</strong>：<br>  `touch test.txt    # 创建一个名为 test.txt 的空文件</p>
+</li>
+</ul>
+<p>touch a.txt b.txt # 同时创建 a.txt 和 b.txt 两个文件`</p>
+<h3 id="2-创建目录：mkdir"><a href="#2-创建目录：mkdir" class="headerlink" title="2. 创建目录：mkdir"></a>2. 创建目录：mkdir</h3><ul>
+<li><p><strong>语法</strong>：mkdir [选项] [目录名]</p>
+</li>
+<li><p><strong>功能</strong>：Make Directory，创建新目录。</p>
+</li>
+<li><p><strong>常用选项</strong>：-p：递归创建多级目录（父目录不存在时自动创建）。</p>
+</li>
+<li><p><strong>示例</strong>：<br>  `mkdir test        # 创建当前目录下的 test 目录</p>
+</li>
+</ul>
+<p>mkdir -p /home/test/abc # 递归创建 /home/test/abc 目录（即使 test 目录不存在）`</p>
+<h3 id="3-删除文件-目录：rm"><a href="#3-删除文件-目录：rm" class="headerlink" title="3. 删除文件/目录：rm"></a>3. 删除文件/目录：rm</h3><ul>
+<li><p><strong>语法</strong>：rm [选项] [文件/目录]</p>
+</li>
+<li><p><strong>功能</strong>：Remove，删除指定文件或目录（<strong>注意：Linux 中 rm 删除的文件无法恢复，慎用！</strong>）。</p>
+</li>
+<li><p><strong>常用选项</strong>：</p>
+<ul>
+<li><p>-f：强制删除，不提示（即使文件不存在也不报错）</p>
+</li>
+<li><p>-r：递归删除，用于删除目录（删除目录及其下所有内容）</p>
+</li>
+</ul>
+</li>
+<li><p><strong>示例</strong>：<br>  `rm test.txt       # 删除 test.txt 文件（会提示确认，输入 y 确认删除）</p>
+</li>
+</ul>
+<p>rm -f a.txt       # 强制删除 a.txt 文件，不提示<br>rm -rf test       # 强制递归删除 test 目录及其下所有内容（高危命令，慎用）<br>rm -rf /home/*    # 强制删除 /home 目录下所有内容（极度高危，禁止随意使用）`</p>
+<h3 id="4-复制文件-目录：cp"><a href="#4-复制文件-目录：cp" class="headerlink" title="4. 复制文件/目录：cp"></a>4. 复制文件/目录：cp</h3><ul>
+<li><p><strong>语法</strong>：cp [选项] 源文件/目录 目标路径</p>
+</li>
+<li><p><strong>功能</strong>：Copy，将源文件/目录复制到指定目标路径。</p>
+</li>
+<li><p><strong>常用选项</strong>：</p>
+<ul>
+<li><p>-r：递归复制，用于复制目录（复制目录及其下所有内容）</p>
+</li>
+<li><p>-f：强制复制，覆盖目标路径下已存在的同名文件，不提示</p>
+</li>
+<li><p>-p：保留源文件的权限、修改时间等属性</p>
+</li>
+</ul>
+</li>
+<li><p><strong>示例</strong>：<br>  `cp test.txt /home # 将当前目录的 test.txt 复制到 /home 目录下</p>
+</li>
+</ul>
+<p>cp -r test /home  # 将当前目录的 test 目录复制到 /home 目录下<br>cp -rf a.txt /home # 强制将 a.txt 复制到 /home，覆盖同名文件`</p>
+<h3 id="5-移动文件-目录：mv"><a href="#5-移动文件-目录：mv" class="headerlink" title="5. 移动文件/目录：mv"></a>5. 移动文件/目录：mv</h3><ul>
+<li><p><strong>语法</strong>：mv [选项] 源文件/目录 目标路径</p>
+</li>
+<li><p><strong>功能</strong>：Move，将源文件/目录移动到指定目标路径；也可用于<strong>重命名文件/目录</strong>（目标路径与源路径同目录时）。</p>
+</li>
+<li><p><strong>常用选项</strong>：-f：强制移动，覆盖目标路径下同名文件，不提示。</p>
+</li>
+<li><p><strong>示例</strong>：<br>  `mv test.txt /home # 将当前目录的 test.txt 移动到 /home 目录下</p>
+</li>
+</ul>
+<p>mv test test_new  # 将当前目录的 test 目录重命名为 test_new<br>mv -f a.txt b.txt # 强制将 a.txt 重命名为 b.txt（覆盖已存在的 b.txt）`</p>
+<h3 id="6-查看文件内容：cat-tail-head-more"><a href="#6-查看文件内容：cat-tail-head-more" class="headerlink" title="6. 查看文件内容：cat/tail/head/more"></a>6. 查看文件内容：cat/tail/head/more</h3><p>不同命令适用于不同场景（查看完整内容、查看末尾/开头、分页查看），按需选择。</p>
+<h4 id="（1）cat：查看文件完整内容（适合小文件）"><a href="#（1）cat：查看文件完整内容（适合小文件）" class="headerlink" title="（1）cat：查看文件完整内容（适合小文件）"></a>（1）cat：查看文件完整内容（适合小文件）</h4><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">语法：<span class="built_in">cat</span> [选项] [文件名]</span><br><span class="line">示例：</span><br><span class="line"><span class="built_in">cat</span> test.txt      <span class="comment"># 查看 test.txt 的完整内容</span></span><br><span class="line"><span class="built_in">cat</span> -n test.txt   <span class="comment"># 查看 test.txt 并显示行号</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="（2）tail：查看文件末尾内容（适合日志文件）"><a href="#（2）tail：查看文件末尾内容（适合日志文件）" class="headerlink" title="（2）tail：查看文件末尾内容（适合日志文件）"></a>（2）tail：查看文件末尾内容（适合日志文件）</h4><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">语法：<span class="built_in">tail</span> [选项] [文件名]</span><br><span class="line">常用选项：</span><br><span class="line">-f：实时监控文件末尾内容（日志输出时常用，按 Ctrl + C 退出）</span><br><span class="line">-n：指定查看末尾 n 行（默认末尾10行）</span><br><span class="line">示例：</span><br><span class="line"><span class="built_in">tail</span> test.txt     <span class="comment"># 查看 test.txt 末尾10行内容</span></span><br><span class="line"><span class="built_in">tail</span> -n 20 test.txt <span class="comment"># 查看 test.txt 末尾20行</span></span><br><span class="line"><span class="built_in">tail</span> -f /var/log/messages <span class="comment"># 实时监控系统日志末尾内容</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="（3）head：查看文件开头内容"><a href="#（3）head：查看文件开头内容" class="headerlink" title="（3）head：查看文件开头内容"></a>（3）head：查看文件开头内容</h4><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">语法：<span class="built_in">head</span> [选项] [文件名]</span><br><span class="line">常用选项：-n：指定查看开头 n 行（默认开头10行）</span><br><span class="line">示例：</span><br><span class="line"><span class="built_in">head</span> test.txt     <span class="comment"># 查看 test.txt 开头10行</span></span><br><span class="line"><span class="built_in">head</span> -n 5 test.txt <span class="comment"># 查看 test.txt 开头5行</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="（4）more：分页查看文件内容（适合大文件）"><a href="#（4）more：分页查看文件内容（适合大文件）" class="headerlink" title="（4）more：分页查看文件内容（适合大文件）"></a>（4）more：分页查看文件内容（适合大文件）</h4><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">语法：more [文件名]</span><br><span class="line">操作说明：</span><br><span class="line">- 按 空格 键：翻到下一页</span><br><span class="line">- 按 Enter 键：翻到下一行</span><br><span class="line">- 按 q 键：退出查看</span><br><span class="line">示例：</span><br><span class="line">more /etc/profile <span class="comment"># 分页查看 /etc/profile 文件（系统环境变量配置文件）</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="7-搜索文件内容：grep"><a href="#7-搜索文件内容：grep" class="headerlink" title="7. 搜索文件内容：grep"></a>7. 搜索文件内容：grep</h3><ul>
+<li><p><strong>语法</strong>：grep [选项] 搜索关键词 文件/目录</p>
+</li>
+<li><p><strong>功能</strong>：在文件或目录中搜索包含指定关键词的内容，是 Linux 中最常用的搜索命令。</p>
+</li>
+<li><p><strong>常用选项</strong>：</p>
+<ul>
+<li><p>-i：忽略大小写（搜索时不区分大小写）</p>
+</li>
+<li><p>-n：显示匹配内容的行号</p>
+</li>
+<li><p>-r：递归搜索（搜索目录及其下所有文件）</p>
+</li>
+<li><p>-v：反向匹配（显示不包含关键词的行）</p>
+</li>
+</ul>
+</li>
+<li><p><strong>示例</strong>：<br>  `grep “test” test.txt # 在 test.txt 中搜索包含 “test” 的内容</p>
+</li>
+</ul>
+<p>grep -in “hello” test.txt # 忽略大小写，搜索 “hello” 并显示行号<br>grep -r “root” /etc # 递归搜索 /etc 目录下所有包含 “root” 的文件<br>grep -v “注释” test.sh # 显示 test.sh 中不包含 “注释” 的行`</p>
+<h3 id="8-查找文件-目录位置：find"><a href="#8-查找文件-目录位置：find" class="headerlink" title="8. 查找文件/目录位置：find"></a>8. 查找文件/目录位置：find</h3><ul>
+<li><p><strong>语法</strong>：find 搜索路径 [选项] 搜索条件</p>
+</li>
+<li><p><strong>功能</strong>：根据指定条件（文件名、大小、修改时间等）查找文件/目录的绝对路径。</p>
+</li>
+<li><p><strong>常用选项/条件</strong>：</p>
+<ul>
+<li><p>-name 文件名：按文件名精确查找（支持通配符 *）</p>
+</li>
+<li><p>-size 大小：按文件大小查找（如 +10M：大于10M，-5K：小于5K）</p>
+</li>
+<li><p>-type f/d：按类型查找（f：文件，d：目录）</p>
+</li>
+</ul>
+</li>
+<li><p><strong>示例</strong>：<br>  `find /home -name “test.txt” # 在 /home 目录下查找名为 test.txt 的文件</p>
+</li>
+</ul>
+<p>find / -name “*.sh”         # 在整个系统中查找所有 .sh 结尾的文件<br>find /var -size +100M       # 在 /var 目录下查找大于100M的文件<br>find /home -type d -name “test” # 在 /home 目录下查找名为 test 的目录`</p>
+<h2 id="三、系统管理命令（运维必备）"><a href="#三、系统管理命令（运维必备）" class="headerlink" title="三、系统管理命令（运维必备）"></a>三、系统管理命令（运维必备）</h2><p>用于查看系统状态、进程管理、用户管理等，适合运维和开发排查问题。</p>
+<h3 id="1-查看系统信息：uname-hostname"><a href="#1-查看系统信息：uname-hostname" class="headerlink" title="1. 查看系统信息：uname/hostname"></a>1. 查看系统信息：uname/hostname</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 查看系统内核版本、系统类型</span></span><br><span class="line"><span class="built_in">uname</span> -a          <span class="comment"># 显示完整系统信息（内核版本、主机名、系统架构等）</span></span><br><span class="line"><span class="built_in">uname</span> -r          <span class="comment"># 仅显示系统内核版本</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看主机名</span></span><br><span class="line">hostname          <span class="comment"># 显示当前主机名</span></span><br><span class="line">hostnamectl set-hostname newname <span class="comment"># 修改主机名（永久生效，需重启生效）</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="2-查看系统负载：top-uptime"><a href="#2-查看系统负载：top-uptime" class="headerlink" title="2. 查看系统负载：top/uptime"></a>2. 查看系统负载：top/uptime</h3><h4 id="（1）top：实时查看系统负载和进程状态（类似-Windows-任务管理器）"><a href="#（1）top：实时查看系统负载和进程状态（类似-Windows-任务管理器）" class="headerlink" title="（1）top：实时查看系统负载和进程状态（类似 Windows 任务管理器）"></a>（1）top：实时查看系统负载和进程状态（类似 Windows 任务管理器）</h4><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">语法：top</span><br><span class="line">操作说明：</span><br><span class="line">- 第一行：系统时间、运行时间、登录用户数、系统负载（1/5/15分钟负载值，越小越好）</span><br><span class="line">- 第二行：进程总数、运行中进程数、休眠进程数等</span><br><span class="line">- 第三行：CPU 使用率（us：用户进程占用，sy：系统进程占用，<span class="built_in">id</span>：空闲CPU）</span><br><span class="line">- 按 q 键：退出 top 视图</span><br><span class="line">- 按 k 键：输入进程ID（PID），可终止指定进程</span><br><span class="line">示例：</span><br><span class="line">top               <span class="comment"># 实时查看系统负载和进程</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="（2）uptime：查看系统运行时间和负载（简易版-top）"><a href="#（2）uptime：查看系统运行时间和负载（简易版-top）" class="headerlink" title="（2）uptime：查看系统运行时间和负载（简易版 top）"></a>（2）uptime：查看系统运行时间和负载（简易版 top）</h4><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">uptime</span>            <span class="comment"># 显示系统运行时间、登录用户数、1/5/15分钟负载</span></span><br><span class="line"><span class="comment"># 示例输出：14:30:00 up 2d 3h 10m,  2 users,  load average: 0.05, 0.08, 0.10</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="3-查看内存使用：free"><a href="#3-查看内存使用：free" class="headerlink" title="3. 查看内存使用：free"></a>3. 查看内存使用：free</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">语法：free [选项]</span><br><span class="line">常用选项：-h：人性化显示内存大小（K、M、G）</span><br><span class="line">示例：</span><br><span class="line">free -h           <span class="comment"># 查看内存总大小、已用、空闲、缓存等信息</span></span><br><span class="line"><span class="comment"># 关键指标说明：</span></span><br><span class="line"><span class="comment"># Mem：物理内存</span></span><br><span class="line"><span class="comment"># Swap：交换分区（虚拟内存，使用率过高说明物理内存不足）</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="4-查看磁盘使用：df-du"><a href="#4-查看磁盘使用：df-du" class="headerlink" title="4. 查看磁盘使用：df/du"></a>4. 查看磁盘使用：df/du</h3><h4 id="（1）df：查看磁盘分区使用情况"><a href="#（1）df：查看磁盘分区使用情况" class="headerlink" title="（1）df：查看磁盘分区使用情况"></a>（1）df：查看磁盘分区使用情况</h4><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">语法：<span class="built_in">df</span> [选项]</span><br><span class="line">常用选项：-h：人性化显示磁盘大小</span><br><span class="line">示例：</span><br><span class="line"><span class="built_in">df</span> -h             <span class="comment"># 查看所有磁盘分区的总大小、已用、空闲、使用率</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="（2）du：查看文件-目录占用磁盘大小"><a href="#（2）du：查看文件-目录占用磁盘大小" class="headerlink" title="（2）du：查看文件/目录占用磁盘大小"></a>（2）du：查看文件/目录占用磁盘大小</h4><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">语法：<span class="built_in">du</span> [选项] [文件/目录]</span><br><span class="line">常用选项：</span><br><span class="line">-h：人性化显示大小</span><br><span class="line">-s：仅显示总大小（不显示子目录详细大小）</span><br><span class="line">示例：</span><br><span class="line"><span class="built_in">du</span> -sh <span class="built_in">test</span>       <span class="comment"># 查看 test 目录占用的总磁盘大小</span></span><br><span class="line"><span class="built_in">du</span> -h /home       <span class="comment"># 查看 /home 目录及其子目录的详细占用大小</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="5-进程管理：ps-kill"><a href="#5-进程管理：ps-kill" class="headerlink" title="5. 进程管理：ps/kill"></a>5. 进程管理：ps/kill</h3><h4 id="（1）ps：查看系统进程"><a href="#（1）ps：查看系统进程" class="headerlink" title="（1）ps：查看系统进程"></a>（1）ps：查看系统进程</h4><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">语法：ps [选项]</span><br><span class="line">常用选项：</span><br><span class="line">-aux：查看所有用户的所有进程（最常用，包含进程ID、占用CPU/内存、进程名称等）</span><br><span class="line">示例：</span><br><span class="line">ps aux            <span class="comment"># 查看所有进程</span></span><br><span class="line">ps aux | grep <span class="string">"java"</span> <span class="comment"># 查看所有 java 相关的进程</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="（2）kill：终止指定进程"><a href="#（2）kill：终止指定进程" class="headerlink" title="（2）kill：终止指定进程"></a>（2）kill：终止指定进程</h4><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">语法：<span class="built_in">kill</span> [选项] 进程ID（PID）</span><br><span class="line">常用选项：</span><br><span class="line">-9：强制终止进程（无法挽回，用于进程卡死时）</span><br><span class="line">-15：正常终止进程（默认选项，允许进程清理资源后退出）</span><br><span class="line">示例：</span><br><span class="line">ps aux | grep <span class="string">"java"</span> <span class="comment"># 先查找 java 进程的 PID（假设 PID 为 1234）</span></span><br><span class="line"><span class="built_in">kill</span> 1234         <span class="comment"># 正常终止 PID 为 1234 的进程</span></span><br><span class="line"><span class="built_in">kill</span> -9 1234      <span class="comment"># 强制终止 PID 为 1234 的进程（高危，慎用）</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="6-用户管理：useradd-passwd-userdel"><a href="#6-用户管理：useradd-passwd-userdel" class="headerlink" title="6. 用户管理：useradd/passwd/userdel"></a>6. 用户管理：useradd/passwd/userdel</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 创建新用户</span></span><br><span class="line">useradd testuser  <span class="comment"># 创建名为 testuser 的用户（默认家目录 /home/testuser）</span></span><br><span class="line">useradd -d /home/abc testuser <span class="comment"># 创建用户并指定家目录为 /home/abc</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置用户密码（密码输入时不显示，需输入两次确认）</span></span><br><span class="line">passwd testuser   <span class="comment"># 为 testuser 设置密码</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除用户</span></span><br><span class="line">userdel testuser  <span class="comment"># 删除 testuser 用户（不删除家目录）</span></span><br><span class="line">userdel -r testuser <span class="comment"># 删除 testuser 用户并删除其家目录</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换用户</span></span><br><span class="line">su - testuser     <span class="comment"># 从 root 用户切换到 testuser 用户（- 表示加载用户环境变量）</span></span><br><span class="line">su root           <span class="comment"># 从普通用户切换到 root 用户（需输入 root 密码）</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="7-权限管理：chmod-chown"><a href="#7-权限管理：chmod-chown" class="headerlink" title="7. 权限管理：chmod/chown"></a>7. 权限管理：chmod/chown</h3><p>Linux 中文件/目录的权限分为 读（r=4）、写（w=2）、执行（x=1），对应 所有者、所属组、其他用户 三类。</p>
+<h4 id="（1）chmod：修改文件-目录权限"><a href="#（1）chmod：修改文件-目录权限" class="headerlink" title="（1）chmod：修改文件/目录权限"></a>（1）chmod：修改文件/目录权限</h4><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">语法：<span class="built_in">chmod</span> [权限值] [文件/目录] 或 <span class="built_in">chmod</span> [选项] 权限标识 [文件/目录]</span><br><span class="line">常用权限值：</span><br><span class="line">755：所有者 rwx（4+2+1），所属组 rx（4+1），其他用户 rx（公开可读可执行，适合脚本）</span><br><span class="line">644：所有者 rw（4+2），所属组 r，其他用户 r（公开可读，适合普通文件）</span><br><span class="line">777：所有用户 rwx（高危，不建议随意使用）</span><br><span class="line">示例：</span><br><span class="line"><span class="built_in">chmod</span> 755 test.sh <span class="comment"># 给 test.sh 设置 755 权限（可执行脚本常用）</span></span><br><span class="line"><span class="built_in">chmod</span> 644 test.txt <span class="comment"># 给 test.txt 设置 644 权限（普通文件常用）</span></span><br><span class="line"><span class="built_in">chmod</span> +x test.sh  <span class="comment"># 给 test.sh 增加执行权限（等价于 chmod 755 中的 x 权限）</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="（2）chown：修改文件-目录的所有者和所属组"><a href="#（2）chown：修改文件-目录的所有者和所属组" class="headerlink" title="（2）chown：修改文件/目录的所有者和所属组"></a>（2）chown：修改文件/目录的所有者和所属组</h4><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">语法：<span class="built_in">chown</span> [所有者]:[所属组] [文件/目录]</span><br><span class="line">示例：</span><br><span class="line"><span class="built_in">chown</span> testuser:testuser test.txt <span class="comment"># 将 test.txt 的所有者和所属组改为 testuser</span></span><br><span class="line"><span class="built_in">chown</span> root:root /home/test       <span class="comment"># 将 /home/test 目录的所有者和所属组改为 root</span></span><br><span class="line"><span class="built_in">chown</span> -R root:root /home/test    <span class="comment"># 递归修改 /home/test 目录及其下所有内容的所有者和所属组</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="四、网络操作命令（常用）"><a href="#四、网络操作命令（常用）" class="headerlink" title="四、网络操作命令（常用）"></a>四、网络操作命令（常用）</h2><p>用于查看网络状态、测试网络连接、配置网络等，适合排查网络问题。</p>
+<h3 id="1-查看网络配置：ifconfig-ip"><a href="#1-查看网络配置：ifconfig-ip" class="headerlink" title="1. 查看网络配置：ifconfig/ip"></a>1. 查看网络配置：ifconfig/ip</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 查看所有网卡信息（IP地址、MAC地址、网卡状态等）</span></span><br><span class="line">ifconfig          <span class="comment"># 传统命令（部分系统需安装 net-tools 工具）</span></span><br><span class="line">ip addr           <span class="comment"># 新一代命令（推荐，所有系统通用）</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 启用/禁用网卡（需 root 权限）</span></span><br><span class="line">ifconfig eth0 up  <span class="comment"># 启用 eth0 网卡（eth0 是网卡名称，需按实际修改）</span></span><br><span class="line">ifconfig eth0 down <span class="comment"># 禁用 eth0 网卡</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="2-测试网络连接：ping"><a href="#2-测试网络连接：ping" class="headerlink" title="2. 测试网络连接：ping"></a>2. 测试网络连接：ping</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">语法：ping [选项] 目标IP/域名</span><br><span class="line">功能：测试本地与目标主机的网络连通性（发送ICMP数据包，接收响应）</span><br><span class="line">常用选项：-c n：发送 n 个数据包后停止（默认无限发送，按 Ctrl + C 停止）</span><br><span class="line">示例：</span><br><span class="line">ping www.baidu.com <span class="comment"># 测试与百度的连通性（无限发送数据包）</span></span><br><span class="line">ping -c 4 192.168.1.1 <span class="comment"># 向 192.168.1.1 发送4个数据包，测试连通性</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="3-查看端口占用：netstat-ss"><a href="#3-查看端口占用：netstat-ss" class="headerlink" title="3. 查看端口占用：netstat/ss"></a>3. 查看端口占用：netstat/ss</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 查看所有端口占用情况（包含进程ID和进程名称）</span></span><br><span class="line">netstat -tulnp    <span class="comment"># 常用组合（t：TCP，u：UDP，l：监听中，n：显示IP/端口，p：显示进程）</span></span><br><span class="line">ss -tulnp         <span class="comment"># 新一代命令（推荐，替代 netstat，速度更快）</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看指定端口占用情况</span></span><br><span class="line">netstat -tulnp | grep 80 <span class="comment"># 查看 80 端口的占用进程</span></span><br><span class="line">ss -tulnp | grep 3306    <span class="comment"># 查看 3306 端口（MySQL 默认端口）的占用情况</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="4-远程登录：ssh"><a href="#4-远程登录：ssh" class="headerlink" title="4. 远程登录：ssh"></a>4. 远程登录：ssh</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">语法：ssh [用户名]@[目标IP地址] -p [端口号]</span><br><span class="line">功能：通过 SSH 协议远程登录到 Linux 主机（默认端口 22）</span><br><span class="line">示例：</span><br><span class="line">ssh root@192.168.1.100 <span class="comment"># 用 root 用户登录 IP 为 192.168.1.100 的主机（默认端口22）</span></span><br><span class="line">ssh testuser@192.168.1.100 -p 2222 <span class="comment"># 用 testuser 用户登录，指定端口 2222</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="5-文件上传-下载：scp"><a href="#5-文件上传-下载：scp" class="headerlink" title="5. 文件上传/下载：scp"></a>5. 文件上传/下载：scp</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">语法：</span><br><span class="line"><span class="comment"># 本地文件上传到远程主机</span></span><br><span class="line">scp [本地文件路径] [远程用户]@[远程IP]:[远程目标路径]</span><br><span class="line"><span class="comment"># 远程文件下载到本地</span></span><br><span class="line">scp [远程用户]@[远程IP]:[远程文件路径] [本地目标路径]</span><br><span class="line">常用选项：-P（大写）：指定远程端口（默认22，与 ssh 端口一致）</span><br><span class="line">示例：</span><br><span class="line"><span class="comment"># 本地 test.txt 上传到远程 /home 目录</span></span><br><span class="line">scp test.txt root@192.168.1.100:/home</span><br><span class="line"><span class="comment"># 远程 /home/test.sh 下载到本地当前目录</span></span><br><span class="line">scp root@192.168.1.100:/home/test.sh ./</span><br><span class="line"><span class="comment"># 指定端口上传</span></span><br><span class="line">scp -P 2222 test.txt root@192.168.1.100:/home</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="五、其他常用命令（补充）"><a href="#五、其他常用命令（补充）" class="headerlink" title="五、其他常用命令（补充）"></a>五、其他常用命令（补充）</h2><h3 id="1-压缩-解压命令：tar"><a href="#1-压缩-解压命令：tar" class="headerlink" title="1. 压缩/解压命令：tar"></a>1. 压缩/解压命令：tar</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">语法：tar [选项] 压缩包名称 源文件/目录（压缩）；tar [选项] 压缩包名称（解压）</span><br><span class="line">常用选项：</span><br><span class="line">-c：创建压缩包（压缩时用）</span><br><span class="line">-x：解压压缩包（解压时用）</span><br><span class="line">-z：用 gzip 格式压缩/解压（压缩包后缀 .tar.gz）</span><br><span class="line">-v：显示压缩/解压过程</span><br><span class="line">-f：指定压缩包名称（必须放在所有选项最后）</span><br><span class="line">示例：</span><br><span class="line"><span class="comment"># 压缩：将 test 目录压缩为 test.tar.gz</span></span><br><span class="line">tar -zcvf test.tar.gz <span class="built_in">test</span></span><br><span class="line"><span class="comment"># 解压：将 test.tar.gz 解压到当前目录</span></span><br><span class="line">tar -zxvf test.tar.gz</span><br><span class="line"><span class="comment"># 解压：将 test.tar.gz 解压到指定目录 /home</span></span><br><span class="line">tar -zxvf test.tar.gz -C /home</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="2-查看历史命令：history"><a href="#2-查看历史命令：history" class="headerlink" title="2. 查看历史命令：history"></a>2. 查看历史命令：history</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">语法：<span class="built_in">history</span></span><br><span class="line">功能：显示当前用户执行过的所有历史命令（默认保存1000条，可修改配置）</span><br><span class="line">示例：</span><br><span class="line"><span class="built_in">history</span>           <span class="comment"># 查看所有历史命令</span></span><br><span class="line"><span class="built_in">history</span> | grep <span class="string">"ls"</span> <span class="comment"># 筛选显示包含 "ls" 的历史命令</span></span><br><span class="line">!100              <span class="comment"># 执行历史命令中第100条命令（结合 history 输出的行号）</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="3-切换root用户：sudo"><a href="#3-切换root用户：sudo" class="headerlink" title="3. 切换root用户：sudo"></a>3. 切换root用户：sudo</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">语法：<span class="built_in">sudo</span> [命令]</span><br><span class="line">功能：普通用户临时获取 root 权限执行指定命令（需输入当前普通用户密码）</span><br><span class="line">示例：</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">ls</span> /root     <span class="comment"># 用 root 权限查看 /root 目录内容（普通用户默认无权限）</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> -rf /home/test <span class="comment"># 用 root 权限删除 /home/test 目录</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="六、常用快捷键（提升效率）"><a href="#六、常用快捷键（提升效率）" class="headerlink" title="六、常用快捷键（提升效率）"></a>六、常用快捷键（提升效率）</h2><ul>
+<li><p>Ctrl + L：清屏（等价于 clear 命令）</p>
+</li>
+<li><p>Ctrl + C：终止当前正在执行的命令（如 ping、top 等）</p>
+</li>
+<li><p>Ctrl + Z：暂停当前命令，后续可通过 fg 命令恢复</p>
+</li>
+<li><p>Tab 键：自动补全命令、文件名、目录名（按一次补全，按两次显示所有可选）</p>
+</li>
+<li><p>Ctrl + R：搜索历史命令（输入关键词，按 Enter 执行匹配的命令）</p>
+</li>
+<li><p>Ctrl + D：退出当前终端（等价于 exit 命令）</p>
+</li>
+</ul>
+<h2 id="七、注意事项"><a href="#七、注意事项" class="headerlink" title="七、注意事项"></a>七、注意事项</h2><ol>
+<li><p>Linux 命令 <strong>严格区分大小写</strong>（如 ls 和 LS 是两个不同命令）。</p>
+</li>
+<li><p>rm -rf 命令极度危险，删除的文件/目录无法恢复，执行前务必确认路径正确。</p>
+</li>
+<li><p>大部分命令需要 root 权限才能执行（普通用户可在命令前加 sudo）。</p>
+</li>
+<li><p>远程操作（ssh、scp）时，确保目标主机的对应端口（默认22）已开放，且网络连通。</p>
+</li>
+<li><p>若命令执行报错，可通过 <code>命令 --help</code> 或 man 命令查看正确用法，或搜索报错信息排查。</p>
+<blockquote>
+<p>（注：文档部分内容可能由 AI 生成）</p>
+</blockquote>
+</li>
+</ol>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">nizikun</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://nizikun.github.io/2026/01/30/linux-chang-yong-cao-zuo-ming-ling/">https://nizikun.github.io/2026/01/30/linux-chang-yong-cao-zuo-ming-ling/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">nizikun</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Linux/">
+                                    <span class="chip bg-color">Linux</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2026/01/30/linux-chang-yong-cao-zuo-ming-ling/">
+                    <div class="card-image">
+                        
+                        <img src="/7" class="responsive-img" alt="Linux常用操作命令">
+                        
+                        <span class="card-title">Linux常用操作命令</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-01-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            nizikun
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2026/01/30/sar-lei-da-rd-suan-fa/">
+                    <div class="card-image">
+                        
+                        <img src="/13" class="responsive-img" alt="SAR雷达RD（距离-多普勒）算法原理与工程实现解析">
+                        
+                        <span class="card-title">SAR雷达RD（距离-多普勒）算法原理与工程实现解析</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-01-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            nizikun
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%9B%B7%E8%BE%BE-SAR-RD/">
+                        <span class="chip bg-color">雷达 SAR RD</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2026</span>
+            
+            <span id="year">2026</span>
+            <a href="/about" target="_blank">Nizikun</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">9.9k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/nizikun" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:nizikun8023@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1811960900" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1811960900" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-z16"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":false},"log":false});</script></body>
+
+</html>

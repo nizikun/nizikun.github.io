@@ -6,7 +6,7 @@
   <link href="https://nizikun.github.io/atom.xml" rel="self"/>
   
   <link href="https://nizikun.github.io/"/>
-  <updated>2026-01-30T03:46:55.000Z</updated>
+  <updated>2026-01-30T10:02:57.679Z</updated>
   <id>https://nizikun.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>sar雷达_RD算法</title>
+    <title>Linux常用操作命令</title>
+    <link href="https://nizikun.github.io/2026/01/30/linux-chang-yong-cao-zuo-ming-ling/"/>
+    <id>https://nizikun.github.io/2026/01/30/linux-chang-yong-cao-zuo-ming-ling/</id>
+    <published>2026-01-30T10:01:50.000Z</published>
+    <updated>2026-01-30T10:02:57.679Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Linux-常用命令手册&quot;&gt;&lt;a href=&quot;#Linux-常用命令手册&quot; class=&quot;headerlink&quot; title=&quot;Linux 常用命令手册&quot;&gt;&lt;/a&gt;Linux 常用命令手册&lt;/h1&gt;&lt;p&gt;本文档整理 Linux</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Linux" scheme="https://nizikun.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SAR雷达RD（距离-多普勒）算法原理与工程实现解析</title>
     <link href="https://nizikun.github.io/2026/01/30/sar-lei-da-rd-suan-fa/"/>
     <id>https://nizikun.github.io/2026/01/30/sar-lei-da-rd-suan-fa/</id>
-    <published>2026-01-30T03:39:58.000Z</published>
-    <updated>2026-01-30T03:46:55.000Z</updated>
+    <published>2026-01-30T03:01:50.000Z</published>
+    <updated>2026-01-30T10:03:59.417Z</updated>
     
     
       
@@ -35,26 +58,7 @@
     
     
     
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://nizikun.github.io/2026/01/29/hello-world/"/>
-    <id>https://nizikun.github.io/2026/01/29/hello-world/</id>
-    <published>2026-01-29T11:35:01.058Z</published>
-    <updated>2026-01-29T09:54:17.632Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
+    <category term="雷达 SAR RD" scheme="https://nizikun.github.io/tags/%E9%9B%B7%E8%BE%BE-SAR-RD/"/>
     
   </entry>
   
